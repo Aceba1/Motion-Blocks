@@ -97,7 +97,7 @@ namespace MotionBlocks
                 }
                 Debt = Vector3.ClampMagnitude(Debt + localAngularVelocity, MaxStrength * MemoryExtent);
 
-                float _m = Mathf.Min(rbody.mass + 25f, 25f) / 25f;
+                float _m = Mathf.Min(rbody.mass + 5f, 25f) / 25f;
                 var torque = rootblock.TransformVector(Vector3.ClampMagnitude(Debt * _m, MaxStrength));
                 rbody.AddTorque(-torque, ForceMode.Impulse);
                 Drum.Rotate(transform.InverseTransformVector(torque) * 0.2f, Space.Self);
