@@ -1,0 +1,9 @@
+﻿{
+  "Id": "aceba1.motionblocks",
+  "DisplayName": "Motion Blocks",
+  "Author": "Aceba1",
+  "Version": "1",
+  "Enable": true,
+  "AssemblyName": "Motion Blocks.dll",
+  "EntryMethod": "MotionBlocks.Class1.CreateBlocks"
+}
