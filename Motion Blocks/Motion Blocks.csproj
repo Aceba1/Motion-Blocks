@@ -326,6 +326,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="HostGUI.cs" />
+    <Compile Include="ModuleDensityShift.cs" />
+    <Compile Include="ModuleReflexGyro.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -341,6 +344,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Blocks\gso_ballast.obj" />
+    <None Include="Blocks\gso_ballast_png" />
+    <None Include="Blocks\gso_ballast_weight.obj" />
     <None Include="Blocks\gso_rag_base.obj" />
     <None Include="Blocks\gso_rag_drum.obj" />
     <None Include="mod.json">

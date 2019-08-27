@@ -61,23 +61,85 @@ namespace MotionBlocks.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to # Blender v2.80 (sub 74) OBJ File: &apos;gso_ballast.blend&apos;
+        ///# www.blender.org
+        ///mtllib gso_ballast.mtl
+        ///o Cube_Cube.000
+        ///v -0.132023 -0.132023 0.500001
+        ///v 0.000000 -0.000000 0.600002
+        ///v -0.132023 0.132023 0.500001
+        ///v 0.132023 -0.132023 0.500001
+        ///v 0.132023 0.132023 0.500001
+        ///v -0.132025 0.500000 -0.132020
+        ///v -0.000002 0.600000 0.000004
+        ///v 0.132021 0.500000 -0.132020
+        ///v -0.132025 0.500000 0.132026
+        ///v 0.132021 0.500000 0.132026
+        ///v -0.500001 -0.132022 -0.132020
+        ///v -0.600002 0.000001 0.000004
+        ///v -0.500002 0.132023 -0.132020
+        ///v -0.50 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string gso_ballast {
+            get {
+                return ResourceManager.GetString("gso_ballast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] gso_ballast_png {
+            get {
+                object obj = ResourceManager.GetObject("gso_ballast_png", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # Blender v2.80 (sub 74) OBJ File: &apos;gso_ballast.blend&apos;
+        ///# www.blender.org
+        ///mtllib gso_ballast_weight.mtl
+        ///o Icosphere
+        ///v -0.000000 -0.450000 0.000000
+        ///v 0.424748 -0.262512 0.308594
+        ///v -0.143134 -0.231603 0.440529
+        ///v -0.444345 -0.222174 0.000000
+        ///v -0.143134 -0.231603 -0.440529
+        ///v 0.424748 -0.262512 -0.308594
+        ///v 0.143134 0.231604 0.440529
+        ///v -0.424748 0.262512 0.308594
+        ///v -0.424748 0.262512 -0.308594
+        ///v 0.143134 0.231604 -0.440529
+        ///v 0.444345 0.222174 0.000000
+        ///v -0.000000 0.450000 0.000000
+        ///v -0.137661 -0.388772 0.423683
+        ///v [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string gso_ballast_weight {
+            get {
+                return ResourceManager.GetString("gso_ballast_weight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to # Blender v2.80 (sub 74) OBJ File: &apos;gso_reflex_axis_gyro.blend&apos;
         ///# www.blender.org
         ///mtllib gso_rag_base.mtl
         ///o Cube
-        ///v 1.400000 0.361250 -0.400000
         ///v 1.400000 -0.361250 -0.400000
-        ///v 1.400000 0.361250 1.400000
         ///v 1.400000 -0.361250 1.400000
-        ///v -0.400000 0.361250 -0.400000
-        ///v -0.400000 -0.361250 -0.400000
-        ///v -0.400000 0.361250 1.400000
+        ///v -0.165000 -0.361250 -0.450000
         ///v -0.400000 -0.361250 1.400000
-        ///v -0.500000 -0.361250 -0.200000
-        ///v 1.500000 0.361250 -0.200000
-        ///v -0.500000 0.361250 -0.200000
+        ///v -0.355000 -0.361250 -0.355000
         ///v 1.500000 -0.361250 -0.200000
         ///v -0.500000 -0.361250 1.200000
+        ///v 1.500000 -0.361250 1.200000
+        ///v 1.200000 -0.361250 -0.500000
+        ///v 1.200000 -0.361250 1.500000
+        ///v 1.307500 -0.500000 -0.307500
+        ///v 1.307500 -0.500000 1.307500
+        ///v 0.422537 0.450000 1.263463
         /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string gso_rag_base {
