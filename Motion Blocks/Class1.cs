@@ -10,7 +10,8 @@ namespace MotionBlocks
         {
             //var harmony = HarmonyInstance.Create("examplepack.changethisname");
             //harmony.PatchAll(System.Reflection.Assembly.GetExecutingAssembly());
-            var gso_mat = GameObjectJSON.GetObjectFromGameResources<Material>("GSO_Main");
+            Material gso_mat = GameObjectJSON.GetObjectFromGameResources<Material>("GSO_Main"),
+                bf_mat = GameObjectJSON.GetObjectFromGameResources<Material>("BF_Main");
             var host = new GameObject("Motion Blocks singleton host");
             host.AddComponent<GUIOverseer>();
             {
@@ -69,6 +70,37 @@ namespace MotionBlocks
                 gso_ballast.RegisterLater();
 
                 module.Range = new Vector2(4, 16);
+            }
+            {
+                var bf_small_floater = new BlockPrefabBuilder("BF_Altimeter_111")
+                    .SetName("Better Future Small Floater Tank")
+                    .SetDescription("When attached to a Tech, this tank heats Celestian Crystals contained within, sublimating these into Celestian Gas, which has high atmospheric buyoancy due to antigravity properties.\nHowever, at higher altitudes it has decreased effect, due to the thin atmosphere.")
+                    .SetBlockID(910601)
+                    .SetFaction(FactionSubTypes.BF)
+                    .SetCategory(BlockCategories.Flight)
+                    .SetGrade(1)
+                    .SetPrice(3096)
+                    .SetHP(400)
+                    .SetMass(0.3f)
+                    .SetIcon(GameObjectJSON.ImageFromFile(Properties.Resources.bf_small_floater_tank_png))
+                    .SetModel(GameObjectJSON.MeshFromData(Properties.Resources.bf_small_floater_tank), true, bf_mat)
+                    .SetSize(new IntVector3(1, 1, 2), BlockPrefabBuilder.AttachmentPoints.Bottom)
+                    .AddComponent<ModuleFloater>(out ModuleFloater module)
+                    .RegisterLater();
+
+                //module.Strength;
+                CustomRecipe.RegisterRecipe(
+                    new CustomRecipe.RecipeInput[]
+                    {
+                    new CustomRecipe.RecipeInput(17, 1),
+                    new CustomRecipe.RecipeInput(43, 1),
+                    new CustomRecipe.RecipeInput(52, 1),
+                    new CustomRecipe.RecipeInput(57, 1),
+                    },
+                    new CustomRecipe.RecipeOutput[]
+                    {
+                    new CustomRecipe.RecipeOutput(910601)
+                    });
             }
         }
     }

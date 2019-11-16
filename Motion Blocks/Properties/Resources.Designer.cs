@@ -61,6 +61,41 @@ namespace MotionBlocks.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to # Blender v2.80 (sub 75) OBJ File: &apos;BF_Small_Floater_Tank.blend&apos;
+        ///# www.blender.org
+        ///mtllib BF_Small_Floater_Tank.mtl
+        ///o BF_Small_Floater_Tank
+        ///v 0.319892 -0.426202 1.230100
+        ///v 0.319892 -0.426202 -0.229634
+        ///v 0.319892 -0.499999 -0.229634
+        ///v 0.319892 -0.499999 1.230100
+        ///v 0.352304 -0.421935 -0.377803
+        ///v 0.319892 -0.426202 -0.377803
+        ///v 0.319892 -0.426202 1.378270
+        ///v 0.352304 -0.421935 1.378270
+        ///v -0.319938 -0.426202 -0.377803
+        ///v -0.352351 -0.421935 -0.377803
+        ///v -0.381943 -0.409677 -0.377803
+        ///v -0.407355 -0.390178 -0.377803
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string bf_small_floater_tank {
+            get {
+                return ResourceManager.GetString("bf_small_floater_tank", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] bf_small_floater_tank_png {
+            get {
+                object obj = ResourceManager.GetObject("bf_small_floater_tank_png", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to # Blender v2.80 (sub 74) OBJ File: &apos;gso_ballast.blend&apos;
         ///# www.blender.org
         ///mtllib gso_ballast.mtl

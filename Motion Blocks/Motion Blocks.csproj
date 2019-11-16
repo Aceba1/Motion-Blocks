@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
@@ -41,7 +43,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="BlockInjector">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\TerraTech\QMods\BlockInjector\BlockInjector.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\TerraTech\QMods\Nuterra.BlockInjector\BlockInjector.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -328,6 +330,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="HostGUI.cs" />
     <Compile Include="ModuleDensityShift.cs" />
+    <Compile Include="ModuleFloater.cs" />
     <Compile Include="ModuleReflexGyro.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -344,6 +347,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Blocks\bf_small_floater_tank.obj" />
     <None Include="Blocks\gso_ballast.obj" />
     <None Include="Blocks\gso_ballast_png" />
     <None Include="Blocks\gso_ballast_weight.obj" />
@@ -355,6 +359,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Blocks\gso_reflex_axis_gyro_png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Blocks\bf_small_floater_tank_png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
