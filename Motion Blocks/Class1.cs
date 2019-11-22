@@ -72,7 +72,7 @@ namespace MotionBlocks
                 module.Range = new Vector2(4, 16);
             }
             {
-                var bf_small_floater = new BlockPrefabBuilder("BF_Altimeter_111")
+                var bf_small_floater = new BlockPrefabBuilder("BF_Block_111")
                     .SetName("Better Future Small Floater Tank")
                     .SetDescription("When attached to a Tech, this tank heats Celestian Crystals contained within, sublimating these into Celestian Gas, which has high atmospheric buyoancy due to antigravity properties.\nHowever, at higher altitudes it has decreased effect, due to the thin atmosphere.")
                     .SetBlockID(910601)
@@ -94,13 +94,13 @@ namespace MotionBlocks
                     {
                     new CustomRecipe.RecipeInput(17, 1),
                     new CustomRecipe.RecipeInput(43, 1),
-                    new CustomRecipe.RecipeInput(52, 1),
-                    new CustomRecipe.RecipeInput(57, 1),
+                    new CustomRecipe.RecipeInput(45, 1),
+                    new CustomRecipe.RecipeInput(49, 1),
                     },
                     new CustomRecipe.RecipeOutput[]
                     {
                     new CustomRecipe.RecipeOutput(910601)
-                    });
+                    }, NameOfFabricator: "bffab");
             }
         }
     }

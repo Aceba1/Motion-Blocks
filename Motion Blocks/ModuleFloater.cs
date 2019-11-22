@@ -10,7 +10,7 @@ namespace MotionBlocks
         public float VelocityDampen = 0.08f;
         void FixedUpdate()
         {
-            if (block.IsAttached && block.tank != null)
+            if (block.IsAttached && block.tank != null && !block.tank.beam.IsActive)
             {
                 Vector3 blockCenter = block.centreOfMassWorld;
                 block.tank.rbody.AddForceAtPosition(Vector3.up * Mathf.Clamp(
