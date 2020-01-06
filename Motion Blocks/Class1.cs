@@ -34,7 +34,8 @@ namespace MotionBlocks
                         new Vector3(0f, 0f, 1.5f), new Vector3(1f, 0f, 1.5f),
                         new Vector3(1.5f, 0f, 0f), new Vector3(1.5f, 0f, 1f) })
                     .SetModel(GameObjectJSON.MeshFromData(Properties.Resources.gso_rag_base), true, gso_mat)
-                    .AddComponent<ModuleReflexGyro>(out ModuleReflexGyro gyro);
+                    .AddComponent<ModuleReflexGyro>(out ModuleReflexGyro gyro)
+                    .SetDeathExplosionReference((int)BlockTypes.GSOGyroAllAxisActive_111);
                 GameObject drum = new GameObject("Gyro_Drum");
                 drum.AddComponent<MeshFilter>().sharedMesh = GameObjectJSON.MeshFromData(Properties.Resources.gso_rag_drum);
                 drum.AddComponent<MeshRenderer>().sharedMaterial = gso_mat;
@@ -42,7 +43,7 @@ namespace MotionBlocks
                 drum.transform.localPosition = new Vector3(0.5f, 0f, 0.5f);
                 gso_rag.RegisterLater();
 
-                gyro.MaxStrength = 200f;
+                gyro.MaxStrength = 250f;
                 gyro.Strength = 200f;
                 gyro.AllAxis = false;
             }
@@ -61,7 +62,8 @@ namespace MotionBlocks
                     .SetMass(4)
                     .SetSize(IntVector3.one, BlockPrefabBuilder.AttachmentPoints.All)
                     .SetModel(GameObjectJSON.MeshFromData(Properties.Resources.gso_ballast), true, gso_mat)
-                    .AddComponent<ModuleDensityShift>(out ModuleDensityShift module);
+                    .AddComponent<ModuleDensityShift>(out ModuleDensityShift module)
+                    .SetDeathExplosionReference((int)BlockTypes.GSOFabricator_322);
                 GameObject weight = new GameObject("Ballast_Weight");
                 weight.AddComponent<MeshFilter>().sharedMesh = GameObjectJSON.MeshFromData(Properties.Resources.gso_ballast_weight);
                 weight.AddComponent<MeshRenderer>().sharedMaterial = gso_mat;
