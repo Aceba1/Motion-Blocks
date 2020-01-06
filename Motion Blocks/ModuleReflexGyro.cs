@@ -11,9 +11,10 @@ namespace MotionBlocks
         public bool AllAxis;
         public float Strength = 200;
         public float MaxStrength = 200f;
+        public float DrumAnimSpeed = 0.2f;
         private Vector3 TiltInput;
-        public Transform Drum;
-        public Vector3 Debt = Vector3.zero;
+        Transform Drum;
+        Vector3 Debt = Vector3.zero;
         public float MemoryExtent = 2f;
 
         public void OnPool()
@@ -58,10 +59,12 @@ namespace MotionBlocks
 
                 Debt = Vector3.ClampMagnitude(Debt + localAngularVelocity, MaxStrength * MemoryExtent);
 
-                float _m = Mathf.Min(rbody.mass + 0f, 25f) / 25f;
+                float ratio = Strength * 0.5f;
+
+                float _m = Mathf.Min(rbody.mass, ratio) / ratio;
                 var torque = rootblock.TransformVector(Vector3.ClampMagnitude(Debt, MaxStrength)) * _m;
                 rbody.AddTorque(-torque, ForceMode.Impulse);
-                Drum.Rotate(transform.InverseTransformVector(torque) * 0.2f, Space.Self);
+                Drum.Rotate(transform.InverseTransformVector(torque) * DrumAnimSpeed, Space.Self);
             }
         }
     }
