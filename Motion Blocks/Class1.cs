@@ -13,6 +13,7 @@ namespace MotionBlocks
             Material gso_mat = GameObjectJSON.GetObjectFromGameResources<Material>("GSO_Main"),
                 bf_mat = GameObjectJSON.GetObjectFromGameResources<Material>("BF_Main");
             var host = new GameObject("Motion Blocks singleton host");
+            host.AddComponent<OptionMenuDensityShift>();
             host.AddComponent<GUIOverseer>();
             {
                 var gso_rag = new BlockPrefabBuilder(/*"GSOBlock(111)", false*/) //Use a reference if you want quick functionality
@@ -47,7 +48,6 @@ namespace MotionBlocks
                 gyro.Strength = 200f;
                 gyro.AllAxis = false;
             }
-            host.AddComponent<OptionMenuDensityShift>();
             {
                 var gso_ballast = new BlockPrefabBuilder()
                     .SetBlockID(9211)
