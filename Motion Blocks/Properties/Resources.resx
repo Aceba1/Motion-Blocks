@@ -117,29 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bf_small_floater_tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\blocks\bf_small_floater_tank.obj;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="bf_small_floater_tank_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\blocks\bf_small_floater_tank_png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="gso_ballast" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\blocks\gso_ballast.obj;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="gso_ballast_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\blocks\gso_ballast_png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="gso_ballast_weight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Blocks\gso_ballast_weight.obj;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="gso_rag_base" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\blocks\gso_rag_base.obj;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="gso_rag_drum" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\blocks\gso_rag_drum.obj;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="gso_reflex_axis_gyro_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\blocks\gso_reflex_axis_gyro_png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
 </root>

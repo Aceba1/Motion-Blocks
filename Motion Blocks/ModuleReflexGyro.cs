@@ -12,6 +12,8 @@ namespace MotionBlocks
         public float Strength = 200;
         public float MaxStrength = 200f;
         public float DrumAnimSpeed = 0.2f;
+        public Vector3 Axis = Vector3.up;
+
         private Vector3 TiltInput;
         Transform Drum;
         Vector3 Debt = Vector3.zero;
