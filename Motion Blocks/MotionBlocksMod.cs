@@ -5,6 +5,8 @@ namespace MotionBlocks
 {
     public class MotionBlocksMod : ModBase
     {
+        internal static Transform dummyTransform;
+
         public override void DeInit()
         {
         }
@@ -20,10 +22,6 @@ namespace MotionBlocks
         {
             if (!Inited)
             {
-                var host = new GameObject("Motion Blocks singleton host");
-                host.AddComponent<OptionMenuDensityShift>();
-                host.AddComponent<GUIOverseer>();
-                UnityEngine.Object.DontDestroyOnLoad(host);
                 Inited = true;
             }
         }

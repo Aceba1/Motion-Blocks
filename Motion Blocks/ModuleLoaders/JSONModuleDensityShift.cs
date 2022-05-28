@@ -16,6 +16,9 @@ namespace MotionBlocks.ModuleLoaders
                 {
                     ModuleDensityShift ballast = base.GetOrAddComponent<ModuleDensityShift>(block);
                     ballast.Range = CustomParser.LenientTryParseVector2(obj, "Range", Vector2.up);
+                    ballast.ScaleRange = CustomParser.LenientTryParseVector2(obj, "ScaleRange", ballast.ScaleRange);
+                    ballast.animationDuration = CustomParser.LenientTryParseFloat(obj, "AnimationDuration", ballast.animationDuration);
+                    ballast.ScaleBallast = CustomParser.LenientTryParseBool(obj, "ScaleBallast", ballast.ScaleBallast);
                     return true;
                 }
                 catch (Exception e)

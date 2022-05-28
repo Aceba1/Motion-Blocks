@@ -98,7 +98,6 @@
     <Compile Include="ModuleLoaders\JSONModuleFloater.cs" />
     <Compile Include="ModuleLoaders\JSONModuleDensityShift.cs" />
     <Compile Include="MotionBlocksMod.cs" />
-    <Compile Include="HostGUI.cs" />
     <Compile Include="ModuleDensityShift.cs" />
     <Compile Include="ModuleReflexGyro.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
