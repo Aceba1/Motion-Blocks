@@ -1,0 +1,9 @@
+{
+	"ModuleDensityShift": {
+		"Range": [4, 16],
+		"ScaleBallast": true
+	},
+	"NuterraBlock": {
+		"ID": 9211
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"ModuleReflexGyro": {
+		"MaxStrength": 250,
+		"Strength": 200,
+		"AllAxis": false
+	},
+	"NuterraBlock": {
+		"ID": 9210
+	}
+}
