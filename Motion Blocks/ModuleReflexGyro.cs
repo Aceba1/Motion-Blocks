@@ -22,7 +22,7 @@ namespace MotionBlocks
         public void OnPool()
         {
             block.AttachedEvent.Subscribe(new Action(this.OnAttach));
-            block.DetachedEvent.Subscribe(new Action(this.OnDetach));
+            block.DetachingEvent.Subscribe(new Action(this.OnDetach));
             Drum = transform.Find("Gyro_Drum");
         }
 
