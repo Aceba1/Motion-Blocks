@@ -60,19 +60,23 @@ namespace MotionBlocks
         }
 
         internal static MethodInfo BaseUpdate = typeof(ModuleVariableMass).GetMethod("Update", InstanceFlags);
+        internal static FieldInfo BlockUpdate = typeof(TankBlock).GetField("BlockUpdate", InstanceFlags);
 
-        public void Update()
+        private void OnUpdate()
         {
-            if (this.ScaleBallast)
-            {
-                BaseUpdate.Invoke(this, null);
-            }
             if (this.m_RemainingColorAnimDuration != 0f)
             {
                 this.m_RemainingColorAnimDuration = Mathf.Max(this.m_RemainingColorAnimDuration - Time.deltaTime, 0f);
                 float colorT = 1f - this.m_RemainingColorAnimDuration / this.animationDuration;
                 this.SetColor(Mathf.Lerp(this.m_LastColor, this.m_NextColor, colorT));
             }
+        }
+
+        public void OnPool()
+        {
+            object blockUpdate = BlockUpdate.GetValue(base.block);
+            MethodInfo subscribe = blockUpdate.GetType().GetMethod("Subscribe", InstanceFlags);
+            subscribe.Invoke(blockUpdate, new object[] { new Action(this.OnUpdate) });
         }
 
         public void OnSpawn()
@@ -108,6 +112,10 @@ namespace MotionBlocks
                     createDummyBallast = false;
                     d.Log($"[Motion Blocks] Set {mr.name} as scaling display object for {base.block.name}");
                 }
+            }
+            else
+            {
+                base.m_MassDisplayObjectScaleRange = new MinMaxFloat(1.0f, 1.0f);
             }
             if (createDummyBallast)
             {

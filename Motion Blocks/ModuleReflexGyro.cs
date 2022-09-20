@@ -21,8 +21,8 @@ namespace MotionBlocks
 
         public void OnPool()
         {
-            block.AttachEvent.Subscribe(new Action(this.OnAttach));
-            block.DetachEvent.Subscribe(new Action(this.OnDetach));
+            block.AttachedEvent.Subscribe(new Action(this.OnAttach));
+            block.DetachedEvent.Subscribe(new Action(this.OnDetach));
             Drum = transform.Find("Gyro_Drum");
         }
 
